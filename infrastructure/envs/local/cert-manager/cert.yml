@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: argo-cert
+  namespace: argo-cd
+spec:
+  secretName: argo-tls
+  issuerRef:
+    name: letsencrypt-staging
+    kind: ClusterIssuer
+  commonName: argo.localhost.nip.io
+  dnsNames:
+  - argo.localhost.nip.io
