@@ -1,4 +1,3 @@
----
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -6,7 +5,7 @@ metadata:
   namespace: argocd
   creationTimestamp: null
   finalizers:
-    - resources-finalizer.argocd.argoproj.io
+  - resources-finalizer.argocd.argoproj.io
   labels:
     app.kubernetes.io/managed-by: argocd-autopilot
     app.kubernetes.io/name: root
@@ -22,7 +21,7 @@ spec:
   project: default
   source:
     path: projects/development
-    repoURL: https://github.com/Lp-Francois/argocd-multi-tenancy.git
+    repoURL: https://github.com/moabukar/argocd-multi.git
   syncPolicy:
     automated:
       allowEmpty: true

@@ -1,4 +1,3 @@
----
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -22,7 +21,7 @@ spec:
   project: default
   source:
     path: projects/local
-    repoURL: https://github.com/Lp-Francois/argocd-multi-tenancy.git
+    repoURL: https://github.com/moabukar/argocd-multi.git
   syncPolicy:
     automated:
       allowEmpty: true
