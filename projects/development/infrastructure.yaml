@@ -1,4 +1,3 @@
----
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
@@ -39,7 +38,7 @@ spec:
   goTemplateOptions: ["missingkey=error"]
   generators:
   - git:
-      repoURL: https://github.com/Lp-Francois/argocd-multi-tenancy.git
+      repoURL: https://github.com/moabukar/argocd-multi.git
       revision: HEAD
       directories:
       - path: infrastructure/envs/development/*
@@ -49,7 +48,7 @@ spec:
     spec:
       project: "infrastructure"
       source:
-        repoURL: https://github.com/Lp-Francois/argocd-multi-tenancy.git
+        repoURL: https://github.com/moabukar/argocd-multi.git
         targetRevision: HEAD
         path: '{{.path.path}}'
       destination:
@@ -64,7 +63,7 @@ spec:
 
       syncPolicy:
         syncOptions:
-          - CreateNamespace=true
+        - CreateNamespace=true
         automated:
           allowEmpty: true
           prune: true

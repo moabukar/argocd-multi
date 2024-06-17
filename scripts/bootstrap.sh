@@ -16,7 +16,7 @@ then
 fi
 
 DEBUG=false
-CLUSTER="local"
+CLUSTER=""
 # skip the confirmation prompt
 FORCE=false
 
